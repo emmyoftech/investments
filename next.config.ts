@@ -20,7 +20,8 @@ const nextConfig = {
 
   // turbopack workspace root
   turbopack: {
-    root: "C:\\Users\\VICTOR\\Downloads\\workspace",
+    // root: "C:\\Users\\VICTOR\\Downloads\\workspace",
+    root:"C:\\Users\\EMMANUEL\\Documents\\Projects\\external\\investments",
   },
 };
 

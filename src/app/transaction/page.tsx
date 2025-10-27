@@ -20,6 +20,8 @@ export default function Transaction() {
   const router = useRouter();
   const { transactions, isLoading, isError, mutate } = useTransactions(user?.email || null);
 
+  console.log("HELLO 223", transactions)
+
   if (isLoading) {
     return (
       <div className="min-h-screen bg-[#0b1130] text-white flex items-center justify-center">
@@ -54,21 +56,21 @@ export default function Transaction() {
         {/* Deposit History */}
         <TransactionTable
           title="Deposit History"
-          data={transactions.depositHistory}
+          data={transactions.depositHistory ?? []}
           emptyMessage="No deposits yet."
         />
 
         {/* Withdrawal History */}
         <TransactionTable
           title="Withdrawal History"
-          data={transactions.withdrawalHistory}
+          data={transactions.withdrawalHistory ?? []}
           emptyMessage="No withdrawals yet."
         />
 
         {/* Investment History */}
         <TransactionTable
           title="Investment History"
-          data={transactions.investmentHistory}
+          data={transactions.investmentHistory ?? []}
           emptyMessage="No investments yet."
         />
       </div>
